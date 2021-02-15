@@ -1,4 +1,4 @@
-# Assessment 1 - HTML/CSS - 
+# Assessment 1 - HTML/CSS
 
 ## Change Log
 
@@ -29,7 +29,8 @@ Please build your page in `task1/index.html`. You are welcome to create as many 
 #### Assets
 
 * The assets are provided in `task1/text.txt` give you the text to put on the page.
-* Your font doesn't have to match exactly. YOu can use font-family `Arial` or `Helvetica` for the page.
+* Your font doesn't have to match exactly. You can use font-family `Arial` or `Helvetica` for the page.
+* The living in Antarctic worksheet can link to the following: https://www.livescience.com/21677-antarctica-facts.html
 
 ### Task 2 - Static, fixed size page
 
@@ -48,14 +49,15 @@ Build a responsive page that complies with `task3/page_big.png` and `task3/page_
 
 Your are expected to have reasonable intermediate states. In other words, if the window size is some combination of widths between 1894 and 419, combined with some combination of heights between 1470 and 3195, the page should still reflect the same general structure.
 
-![](./task5/page_big.png)
-![](./task5/page_small.png)
+![](./task3/page_big.png)
+![](./task3/page_small.png)
 
-Please build your page in `task5/index.html`. You are welcome to create as many CSS files that you need in the `task5` folder for `index.html` to import. When being marked, your tutor will start with `index.html`.
+Please build your page in `task3/index.html`. You are welcome to create as many CSS files that you need in the `task3` folder for `index.html` to import. When being marked, your tutor will start with `index.html`.
 
 On top of this you are required to:
  * Ensure that the *UNSWROX* invite code component has a hover opacity of `0.7`.
  * When your mouse hovers over any of the 6 component boxes (which includes the image, header, and text) it should make the opacity of that entire component box (image, header, and text) `0.5`.
+ * The emoji is 🙌
 
 #### Assets
 * Your font doesn't have to match exactly. YOu can use font-family `Arial` for the page.
@@ -74,66 +76,39 @@ Make a page `task4/index.html`.
 
 The page consists of a:
  * Table
-   * Text input for Street Name (must be between 3 and 50 characters)
-   * Text input for Suburb (must be between 3 and 50 characters)
-   * Text input for Postcode (must be a number that is exactly 4 digits)
-   * Text input for Date of birth (valid input is the exactformat "DD/MM/YYYY" and must be a valid date. This means it must match the regex expression "[0-9]{2}/[0-9]{2}/[0-9]{4}" and when trying to parse it with the Javascript date object it does not return **NaN**)
-   * Dropdown for building type (either "Apartment" or "House", no other options). Apartment is default.
-   * Checkbox for features that the house has (Heating, AirConditioning, Pool, Sandpit)
+   * Text input for `Street` Name (must be between 3 and 50 characters).
+   * Text input for `Suburb` (must be between 3 and 50 characters).
+   * Text input for `Postcode` (must be a number that is exactly 4 digits).
+   * Text input for `Date of birth` (valid input is the exactformat "DD/MM/YYYY" and must be a valid date. This means it must match the regex expression "[0-9]{2}/[0-9]{2}/[0-9]{4}" and when trying to parse it with the Javascript date object it does not return **NaN**).
+   * Dropdown for `building type` (either "Apartment" or "House", no other options). Apartment is default.
+   * Checkbox for `features` that the house has (Heating, AirConditioning, Pool, Sandpit).
+   * Button to select / deselect all.
  * Remove button
  * Textarea (initially blank)
 
 #### Actions
 
 The following are events that trigger a render that should be binded to particular actions
-* Changing of the "cities lived in", or "favourite animal" should trigger a render
-* Blur of the "First Name", "Last Name", or "Date of birth" should trigger a render
+* Changing of the "building type" or "features" should trigger a render.
+* Blur of the "street name", "suburb", "postcode", or "date of birth" should trigger a render.
 
-When the "remove" button is clicked, the `textarea` has all of its text removed (i.e. it becomes blank again), and all of the form elements in the table are reset to their default state.
+There are key buttons on the page:
+* When the `Select All` button is clicked inside the features section, all 4 feature checkboxes are selected.
+  * At any time when all 4 features are selected, the `Select All` button's text is changed to `Deselect all`. When this button is pressed in this state, all 4 of the feature checkboxes become unselected.
+* When the `reset` button is clicked, the `textarea` has all of its text removed (i.e. it becomes blank again), and all of the form elements in the table are reset to their default state.
 
 #### Rendering
 
 The "output" refers to what the inner HTML text should be of the textarea at the bottom of the page.
 
-* If they haven't inputted a street name, or the street name entered is invalid, the output should be "Please input a valid street name"
-* If they have inputted a street name, but haven't inputted a suburb / the suburb is invalid, the output should be "Please input a valid suburb"
-* If they have inputted a street name and suburb, but haven't inputted a postcode / the postcode is invalid, the output should be "Please input a valid postcode"
-* If they have inputted a street name, suburb, and postcode, but haven't inputted a valid date of birth, the output should be "Please enter a valid date of birth"
-* If they have entered the above correctly, the output is "Your are [age (integer)] years old, and your address is [street name] St, [suburb], [postcode], Australia. Your building is [a|an] [building type], and it has [features]"
-  * If no features are selected, [features] is "no features"
-  * If 1 feature is selected, [features] is just "[feature1]"
-  * If 2 or more feature are selected, [cities] is just "[feature1], [feature2], and [feature3]" etc, where "and" joins the last and second last feature.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-🙌
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* If they haven't inputted a `street name`, or the `street name` entered is invalid, the output should be _"Please input a valid street name"_
+* If they have inputted a `street name`, but haven't inputted a `suburb` / the `suburb` is invalid, the output should be _"Please input a valid suburb"_
+* If they have inputted a `street name` and `suburb`, but haven't inputted a `postcode` / the `postcode` is invalid, the output should be _"Please input a valid postcode"_
+* If they have inputted a `street name`, `suburb`, and `postcode`, but haven't inputted a valid `date of birth`, the output should be _"Please enter a valid date of birth"_
+* If they have entered the above correctly, the output is _"Your are [age (integer)] years old, and your address is [street name] St, [suburb], [postcode], Australia. Your building is [a|an] [building type], and it has [features]"_
+  * If no features are selected, [features] is _"no features"_
+  * If 1 feature is selected, [features] is just _"[feature1]"_
+  * If 2 or more feature are selected, [cities] is just _"[feature1], [feature2], and [feature3]"_ etc, where "and" joins the last and second last feature.
 
 ## Analysing the pages
 
@@ -179,7 +154,7 @@ Your assignment will be hand-marked by tutor(s) in the course according to the c
 	</tr>
 	<tr>
 		<td>Code Quality</td>
-		<td>40%</td>
+		<td>50%</td>
 		<td>
 			<ul>
 				<li>HTML is appropriately formatted such that each inner HTML is indented with respect to the outer one</li>
@@ -188,14 +163,6 @@ Your assignment will be hand-marked by tutor(s) in the course according to the c
 				<li>CSS has limited repetition where multiple similar components use the same underlying styles</li>
 				<li>JS code is appropriately styled and formatted based on common conventions shown in lectures</li>
 				<li>Ensure that source code (HTML, CSS, JS) is no more complicated or verbose than necessary to solve a given problem (less is more).</li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td>Modern Methods</td>
-		<td>10%</td>
-		<td>
-			<ul>
 				<li>Maintaining separation between HTML and CSS for structural and stylistic aspects, respectively</li>
 				<li>Avoiding usage of more obselete methods of page styling that have been discussed in lectures (e.g. tables for non-tabular purposes)</li>
 			</ul>
