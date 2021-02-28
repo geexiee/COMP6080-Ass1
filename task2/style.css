@@ -1,0 +1,30 @@
+body {
+    height:699px;
+    width:420px;
+    background-color: white;
+}
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(35px, 1fr));
+}
+
+.darkcolumn {
+    height: 699px;
+    background-color: navy;
+}
+
+.lightcolumn {
+    height: 699px;
+    background-color: blue;
+}
+
+.redpiece {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    background-color: red;
+    height: 35px;
+    width: 35px;
+
+}
