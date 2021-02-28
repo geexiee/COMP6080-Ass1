@@ -7,24 +7,62 @@ body {
 .gridcontainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(35px, 1fr));
 }
 
 .darkcolumn {
+    display:grid;
     height: 699px;
-    background-color: navy;
+    grid-template-rows: repeat(auto-fill, minmax(35px, 1fr));
+    background-color: #021c2d;
 }
 
 .lightcolumn {
+    display: grid;
     height: 699px;
-    background-color: blue;
+    grid-template-rows: repeat(auto-fill, minmax(35px, 1fr));
+    background-color: #00263f;
 }
 
-.redpiece {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    background-color: red;
+.upperredpiece {
+    grid-row-start: 18;
+    background-color: #e94659;
     height: 35px;
-    width: 35px;
-
+    width: 33px;
 }
+
+.lowerredpiece {
+    grid-row-start: 19;
+    background-color: #e94659;
+    height: 35px;
+    width: 33px;
+}
+
+.purplesquare1 {
+    grid-row-start: 13;
+    background-color: #ae81ff;
+    height: 35px;
+    width: 33px;
+}
+
+.purplesquare2 {
+    grid-row-start: 12;
+    background-color: #ae81ff;
+    height: 34px;
+    width: 33px;
+}
+
+.purplesquare3 {
+    grid-row-start: 19;
+    background-color: #ae81ff;
+    height: 35px;
+    width: 33px;
+}
+
+.purplesquare4 {
+    grid-row-start: 18;
+    background-color: #ae81ff;
+    height: 35px;
+    width: 33px;
+}
+
+/*#efe6ff WHITE COLOUR*/

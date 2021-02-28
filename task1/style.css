@@ -8,7 +8,7 @@ body {
 .grey_box {
 	height: 105px;
 	width: 230px;
-	background-color: lightgrey;
+	background-color: #eeeeee;
 	float: right;
 	display: flex;
 	justify-content: space-evenly;
@@ -16,7 +16,7 @@ body {
 }
 
 .koalainfo {
-	color:grey;
+	color:#666c7b;
 	padding-left: 10px;
 	font-size: 13px;
 	padding-bottom: 10px;
@@ -32,7 +32,7 @@ body {
 	position:relative;
 	right:20px;
 	padding-left: 20px;
-	background-color: gold;
+	background-color: #f3cd4a;
 	height: 40px;
 	width: 180px;
 	display: flex;
