@@ -1,31 +1,34 @@
 body {
-	height: 1219px;
-	width: 883px;
+	height: 883px;
+	width: 1219px;
 	position:relative;
-	left:20px;
+	left:40px;
+	font-family: arial;
+	font-size: 20px;
 }
 
 .grey_box {
-	height: 105px;
-	width: 230px;
+	height: 140px;
+	width: 280px;
 	background-color: #eeeeee;
 	float: right;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	flex-direction: column;
 }
 
 .koalainfo {
 	color:#666c7b;
-	padding-left: 10px;
-	font-size: 13px;
+	padding-left: 12px;
+	font-size: 16px;
 	padding-bottom: 10px;
 }
 
 #koalainfoheader {
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: bold;
-	margin-bottom: 15px;
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 
 .yellowbox {
@@ -34,7 +37,7 @@ body {
 	padding-left: 20px;
 	background-color: #f3cd4a;
 	height: 40px;
-	width: 180px;
+	width: 210px;
 	display: flex;
 	align-items: center;
 	font-size: 30px;
@@ -43,12 +46,24 @@ body {
 
 .headers {
 	font-weight:bold;
-	font-size: 20px;
+	font-size: 23px;
 }
 
-#koalaclasses {
+#koalaclass1 {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-	margin-bottom: 10px;
+	padding: 5px 0px;
+}
+#koalaclass {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	padding: 5px 0px;
+}
+#koalaclass3 {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	padding: 5px 0px;
 }
