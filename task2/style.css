@@ -65,4 +65,13 @@ body {
     width: 33px;
 }
 
+
+.triangle {
+    width: 0;
+    height: 0;
+    margin: 2px;
+    border-top:10px solid rgb(248, 237, 237);
+    border-right: 10px solid transparent;
+ }
+
 /*#efe6ff WHITE COLOUR*/
