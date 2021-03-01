@@ -1,0 +1,14 @@
+body {
+    font-family: arial;
+    color: #000037;
+}
+
+.title {
+    text-align: center;
+    font-size: 20px;
+}
+
+.gridoutline {
+    display: grid;
+    grid-template-columns: ;
+}
