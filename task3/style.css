@@ -2,6 +2,9 @@ body {
     font-family: arial;
     color: #000037;
     height: 100%;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 html {
@@ -9,12 +12,13 @@ html {
 }
 
 .title {
+    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
     font-size: 48px;
     font-weight:bold;
-    margin-bottom: 60px;
+    margin:auto;
 }
 
 .flexoutline {
@@ -30,6 +34,8 @@ html {
 
 .iconsquare {
     flex-basis: 33%;
+    font-weight: bold;
+    line-height: 2;
 }
 
 .iconsquare:hover {
@@ -37,9 +43,7 @@ html {
 }
 
 .icontext {
-    margin-top: 60px;
     text-align: center;
-    margin-bottom: 60px;
 }
 
 #yellowbanner {
@@ -56,7 +60,7 @@ html {
 
 .miniheader {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 15px;
 }
 
