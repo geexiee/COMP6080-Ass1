@@ -1,72 +1,72 @@
 body {
-	height: 883px;
-	width: 1219px;
-	position:relative;
-	left:40px;
 	font-family: arial;
 	font-size: 19px;
+	height: 883px;
+	left: 40px;
 	padding-left: 30px;
+	position: relative;
+	width: 1219px;
 }
 
-.grey_box {
-	height: 140px;
-	width: 310px;
+.grey-box {
 	background-color: #eeeeee;
-	float: right;
 	display: flex;
-	justify-content: space-around;
 	flex-direction: column;
+	float: right;
+	height: 140px;
+	justify-content: space-around;
 	margin-right: 62px;
+	width: 310px;
 }
 
 .koalainfo {
-	color:#666c7b;
-	padding-left: 12px;
+	color: #666c7b;
 	font-size: 15px;
 	padding-bottom: 10px;
+	padding-left: 12px;
 }
 
 #koalainfoheader {
 	font-size: 25px;
 	font-weight: bold;
-	margin-top: 10px;
 	margin-bottom: 5px;
+	margin-top: 10px;
 }
 
 .yellowbox {
-	position:relative;
-	right:20px;
-	padding-left: 20px;
-	background-color: #f3cd4a;
-	height: 50px;
-	width: 200px;
-	display: flex;
 	align-items: center;
+	background-color: #f3cd4a;
+	display: flex;
 	font-size: 28px;
 	font-weight: bold;
+	height: 50px;
+	padding-left: 20px;
+	position: relative;
+	right: 20px;
+	width: 200px;
 }
 
 .headers {
-	font-weight:bold;
 	font-size: 22px;
+	font-weight: bold;
 }
 
 #koalaclass1 {
 	display: flex;
-	justify-content: space-between;
 	flex-direction: column;
+	justify-content: space-between;
 	padding: 5px 0px;
 }
 #koalaclass {
 	display: flex;
-	justify-content: space-between;
 	flex-direction: column;
+	justify-content: space-between;
 	padding: 5px 0px;
 }
 #koalaclass3 {
 	display: flex;
-	justify-content: space-between;
 	flex-direction: column;
+	justify-content: space-between;
 	padding: 5px 0px;
 }
 

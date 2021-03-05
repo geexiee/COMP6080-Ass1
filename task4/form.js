@@ -4,7 +4,7 @@ let validPostcode = false;
 let validDOB = false;
 
 
-const validateStreetName = (name) => {
+const validateStreetName = () => {
     const streetName = document.getElementById('streetName').value;
 
     if (!streetName || streetName.length < 3 || streetName.length > 50) {
@@ -14,7 +14,7 @@ const validateStreetName = (name) => {
     }
 }
 
-const validateSuburbName = (name) => {
+const validateSuburbName = () => {
     const suburbName = document.getElementById('suburb').value;
 
     if (!suburbName || suburbName.length < 3 || suburbName.length > 50) {
@@ -36,12 +36,20 @@ const validatePostcode = () => {
 
 const validateDOB = () => {
     const dob = document.getElementById('dob').value;
+    var dateformat = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+
     var stringsplit = dob.split("/");
-    let americandob = stringsplit[1]+"/"+stringsplit[0]+"/"+stringsplit[2];
+    let americanDOB = stringsplit[1]+"/"+stringsplit[0]+"/"+stringsplit[2];
     const regex_template = new RegExp("[0-9]{2}/[0-9]{2}/[0-9]{4}");
-    if (Date.parse(americandob) != NaN && regex_template.test(dob) == true) {
+
+    // checking that the inputted date is valid
+    if (Date.parse(americanDOB) != NaN && regex_template.test(dob) == true) {
         validDOB = true;
     } else {
+        validDOB = false;
+    }
+    
+    if (!(dob.match(dateformat))) {
         validDOB = false;
     }
 }
@@ -53,7 +61,7 @@ const validatePage = () => {
     const streetName = form.elements['streetName'].value;
     const suburbName = form.elements['suburb'].value;
     const postcode = form.elements['postcode'].value;
-    const buildingtype = form.elements['buildings'].value;
+    const buildingType = form.elements['buildings'].value;
     const dob = form.elements['dob'].value;
 
     validateStreetName();
@@ -61,73 +69,76 @@ const validatePage = () => {
     validatePostcode();
     validateDOB();
 
-    // getting list of features
-    var featurelist = []
+    // getting list of selected features
+    var featureList = []
     var features = ""
     let checkboxes = document.querySelectorAll('input[type="checkbox"]');
     for (let i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked == true) {
-            featurelist.push(checkboxes[i].name);
+            featureList.push(checkboxes[i].name);
         } 
     }
-    if (featurelist.length == 0) {
+    if (featureList.length == 0) {
         features = "no features";
     }
-    else if (featurelist.length == 1) {
-        features = featurelist[0];
+    else if (featureList.length == 1) {
+        features = featureList[0];
     } 
     else {
-        for (let i = 0; i < featurelist.length; i++) {
-            if (i == (featurelist.length-1)) {
-                features = features + "and " + featurelist[i];
+        for (let i = 0; i < featureList.length; i++) {
+            if (i == (featureList.length-1)) {
+                features = features + "and " + featureList[i];
             } else {
-                features = features + featurelist[i] + ", "
+                features = features + featureList[i] + ", ";
             }
         }
     }
-    if (featurelist.length == 4) {
+
+    // changing select button text
+    if (featureList.length == 4) {
         document.querySelector('#selectallbutton').innerText = "Deselect All";
     } else {
         document.querySelector('#selectallbutton').innerText = "Select All";
     }
     
+    // inputting text based on entered values
     if (validStreetName == false) {
-        textarea.value = "Please enter a valid street name"
+        textarea.value = "Please enter a valid street name";
     } 
     else if (validSuburbName == false) {
-        textarea.value = "Please enter a valid suburb"
+        textarea.value = "Please enter a valid suburb";
     }
     else if (validPostcode == false) {
-        textarea.value = "Please enter a valid postcode"
+        textarea.value = "Please enter a valid postcode";
     }
     else if (validDOB == false) {
-        textarea.value = "Please enter a valid date of birth"
+        textarea.value = "Please enter a valid date of birth";
     }
     else {
         // calculating current age
         var stringsplit = dob.split("/");
-        var americandob = stringsplit[1]+"/"+stringsplit[0]+"/"+stringsplit[2];
-        var birthdate = new Date(americandob);
+        var americanDOB = stringsplit[1]+"/"+stringsplit[0]+"/"+stringsplit[2];
+        var birthdate = new Date(americanDOB);
         var currdate = new Date();
-        const curragesecs = currdate.getTime() - birthdate.getTime();
-        const currageyears = Math.floor(curragesecs / (1000 * 60 * 60 * 24 * 365.25))
+        const currAgeSecs = currdate.getTime() - birthdate.getTime();
+        const currAgeYears = Math.floor(currAgeSecs / (1000 * 60 * 60 * 24 * 365.25))
 
-        if (buildingtype == 'house') {
-            textarea.value = "You are " + currageyears + " years old, and your address is " + streetName + " St, " + suburbName + ", " + postcode + ", Australia. Your building is a " + buildingtype + ", and it has " + features;
+        if (buildingType == 'house') {
+            textarea.value = "You are " + currAgeYears + " years old, and your address is " + streetName + " St, " + suburbName + ", " + postcode + ", Australia. Your building is a " + buildingType + ", and it has " + features;
         } else {
-            textarea.value = "You are " + currageyears + " years old, and your address is " + streetName + " St, " + suburbName + ", " + postcode + ", Australia. Your building is an " + buildingtype + ", and it has " + features;
+            textarea.value = "You are " + currAgeYears + " years old, and your address is " + streetName + " St, " + suburbName + ", " + postcode + ", Australia. Your building is an " + buildingType + ", and it has " + features;
         }
     }
 }
-
 
 const reset = () => {
     location.reload();
 }
 
-const selectall = () => {
+const selectAll = () => {
     checkboxes = document.querySelectorAll('input[type="checkbox"]');
     let flag = false;
+    
     for (let i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked == false) {
             flag = true;

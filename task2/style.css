@@ -1,7 +1,7 @@
 body {
-    height:699px;
-    width:420px;
     background-color: white;
+    height: 699px;
+    width: 420px;
 }
 
 .gridcontainer {
@@ -10,68 +10,65 @@ body {
 }
 
 .darkcolumn {
-    display:grid;
-    height: 699px;
-    grid-template-rows: repeat(auto-fill, minmax(35px, 1fr));
     background-color: #021c2d;
+    display:grid;
+    grid-template-rows: repeat(auto-fill, minmax(35px, 1fr));
+    height: 699px;
 }
 
 .lightcolumn {
-    display: grid;
-    height: 699px;
-    grid-template-rows: repeat(auto-fill, minmax(35px, 1fr));
     background-color: #00263f;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(35px, 1fr));
+    height: 699px;
 }
 
-.upperredpiece {
+.upper-red-square {
+    background-color: #e94659;
     grid-row-start: 18;
-    background-color: #e94659;
     height: 35px;
     width: 33px;
 }
 
-.lowerredpiece {
+.lower-red-square {
+    background-color: #e94659;
     grid-row-start: 19;
-    background-color: #e94659;
     height: 35px;
     width: 33px;
 }
 
-.purplesquare1 {
+.lower-purple-square1 {
+    background-color: #ae81ff;
     grid-row-start: 13;
-    background-color: #ae81ff;
     height: 35px;
     width: 33px;
 }
 
-.purplesquare2 {
-    grid-row-start: 12;
+.upper-purple-square1 {
     background-color: #ae81ff;
+    grid-row-start: 12;
     height: 34px;
     width: 33px;
 }
 
-.purplesquare3 {
+.lower-purple-square2 {
+    background-color: #ae81ff;
     grid-row-start: 19;
-    background-color: #ae81ff;
     height: 35px;
     width: 33px;
 }
 
-.purplesquare4 {
+.upper-purple-square2 {
+    background-color: #ae81ff;
     grid-row-start: 18;
-    background-color: #ae81ff;
     height: 35px;
     width: 33px;
 }
-
 
 .triangle {
-    width: 0;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgb(248, 237, 237);
     height: 0;
     margin: 2px;
-    border-top:10px solid rgb(248, 237, 237);
-    border-right: 10px solid transparent;
+    width: 0;
  }
-
-/*#efe6ff WHITE COLOUR*/
