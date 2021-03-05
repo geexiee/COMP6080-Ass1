@@ -4,23 +4,25 @@ body {
 	position:relative;
 	left:40px;
 	font-family: arial;
-	font-size: 20px;
+	font-size: 19px;
+	padding-left: 30px;
 }
 
 .grey_box {
 	height: 140px;
-	width: 280px;
+	width: 310px;
 	background-color: #eeeeee;
 	float: right;
 	display: flex;
 	justify-content: space-around;
 	flex-direction: column;
+	margin-right: 62px;
 }
 
 .koalainfo {
 	color:#666c7b;
 	padding-left: 12px;
-	font-size: 16px;
+	font-size: 15px;
 	padding-bottom: 10px;
 }
 
@@ -36,17 +38,17 @@ body {
 	right:20px;
 	padding-left: 20px;
 	background-color: #f3cd4a;
-	height: 40px;
-	width: 210px;
+	height: 50px;
+	width: 200px;
 	display: flex;
 	align-items: center;
-	font-size: 30px;
+	font-size: 28px;
 	font-weight: bold;
 }
 
 .headers {
 	font-weight:bold;
-	font-size: 23px;
+	font-size: 22px;
 }
 
 #koalaclass1 {
@@ -66,4 +68,9 @@ body {
 	justify-content: space-between;
 	flex-direction: column;
 	padding: 5px 0px;
+}
+
+paragraph1 {
+	margin-left: 10px;
+	padding-left: 10px;
 }
